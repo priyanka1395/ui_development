@@ -1,0 +1,38 @@
+
+<html>
+	<head>
+		<title>jquery</title>
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			i{
+				display:none;
+				color:red;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("input").blur(function(){
+					var data=$(this).val();
+					var id=$(this).attr("id");
+					if(data=="")
+					{
+						$("#e"+id).show();
+					}
+					else{
+						$("#e"+id).hide();
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+	name<input type="text" id="fname">
+	<i id="efname">please enter name</i>
+	<br>
+	mobile<input type="text" id="mobile">
+	<i id="emobile">please enter mobile</i>
+	<br>
+	email<input type="text" id="email">
+	<i id="eemail">please enter email</i>
+	</body>
+</html>

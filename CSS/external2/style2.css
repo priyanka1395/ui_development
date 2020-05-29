@@ -1,0 +1,36 @@
+body{
+margin:0px;
+}
+
+#header{
+padding:40px;
+text-align:center;
+background:yellow;
+}
+.column{
+float:left;
+min-height:300px;
+padding:10%;
+}
+
+.sidea{
+  width:23.5%;
+  background:skyblue;
+  min-height:300px;
+  margin:1%;
+  }
+  
+ .middle{
+  width:47%;
+  background:pink;
+  margin:10%;
+  }
+  
+  .footer{
+ padding:30px;
+text-align:center;
+background:green;
+}
+
+.clearblock{
+clear:both;

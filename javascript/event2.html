@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<title>
+			array function
+			</title>
+			<script>
+				function pushelement() //add a new element to an array at the end//
+				{
+					var fruits=["mango","banana","apple","sapota"];
+					fruits=fruits.push("grapes");
+					document.getElementById("result").innerHTML=fruits;
+				}
+				function popelement()//remove the last element from array//
+				{
+					var fruits=["mango","banana","apple","sapota"];
+					fruits=fruits.pop();
+					document.getElementById("result").innerHTML=fruits;
+				}
+				function insert() //join array element into string//
+				{
+					var names=["radha","geeta","jamuna"];
+					names=names.join("*");
+					document.getElementById("result").innerHTML=names;
+				}
+				function combine()//creates a new array by concatenating existing arrays:
+				{
+					var names=["radha","geeta","jamuna"];
+					var marks=[100,200,300];
+					var namemarks=names.concat(marks);
+					document.getElementById("result").innerHTML=namemarks;
+				}
+				function calculatelength()
+				{
+					var marks=[100,200,300];
+					var length=marks.length;
+					alert("the length of array is:"+length);
+				}
+				function removefirst() //remove first element of an array//
+				{
+					var rivers=["jamuna","tapi","ganga","godavari","krishna","kaveri"];
+					rivers.shift();
+					document.getElementById("result").innerHTML=rivers;
+				}
+				function addfirst() //add a new ellement to an array at the begining//
+				{
+					var rivers=["tapi","ganga","godavari","krishna","kaveri"];
+					rivers.unshift("jamuna");
+					document.getElementById("result").innerHTML=rivers;
+				}
+				function convert() //convert to an array to string//
+				{
+					var rivers=["tapi","ganga","godavari","krishna","kaveri"];
+					document.getElementById("result").innerHTML=rivers.toString();
+					
+				}
+				function addmore() //it add new item to an array//
+				{
+					var veg=["brinjal","carrot"];
+					veg.splice(2,0,"pumpikin","patato"); //The first parameter (2) dfns the position where new elements should be added (spliced in).//
+
+														//The second parameter (0) dfns how many elements should be removed.//
+
+														//The rest of the parameters ("pumpkin" , "patato") dfns the new elements to be added.//
+					document.getElementById("result").innerHTML=veg;
+				}
+				function removemore()
+				{
+					var veg=["brinjal","carrot","pumpkin","patato"];//The first parameter (0) dfns the position where new elements should be added (spliced in).//
+					veg.splice(0,2); //The second parameter (2) dfns how many elements should be removed.//
+					document.getElementById("result").innerHTML=veg;//The rest of the parameters are omitted. No new elements will be added.//
+				}
+				function formnewarray()//slices out a piece of an array into a new array & It does not remove any elements from the source array//
+				{
+					var veg=["brinjal","carrot","pumpkin","patato"];
+					veg2=veg.slice(3);
+					document.getElementById("result").innerHTML=veg2;
+				}
+				function ascending()
+				{
+					var veg=["pumpkin","raddish","brinjal","carrot"];
+					veg2=veg.sort();
+					document.getElementById("result").innerHTML=veg2;
+				}
+				function descending()
+				{
+					var veg=["brinjal","carrot","pumpkin","patato"];
+					veg2=veg.sort().reverse();
+					document.getElementById("result").innerHTML=veg2;
+				}
+				function deletecomplete() //it delete the element of array & give undefine statement//
+				{
+					var veg=["brinjal","carrot","pumpkin","patato"];
+					delete veg[2]; // here[2] is a parameter that indicate to "pumpkin" & here pumpkin is undefine//
+					document.getElementById("result").innerHTML=veg[2];
+				}
+				
+				</script>
+	</head>
+	<body>
+		<button type="button" onclick="pushelement()">push</button>
+		<button type="button" onclick="popelement()">pop</button>
+		<button type="button" onclick="insert()">join *</button>
+		<button type="button" onclick="combine()">concat</button>
+		<button type="button" onclick="calculatelength()">find length</button>
+		<button type="button" onclick="removefirst()">remove first</button>
+		<button type="button" onclick="addfirst()">add first</button>
+		<button type="button" onclick="convert()">array to string</button>
+		<button type="button" onclick="addmore()">add more</button>
+		<button type="button" onclick="removemore()">remove more</button>
+		<button type="button" onclick="formnewarray()">slicing an array</button>
+		<button type="button" onclick="ascending()">ascending</button>
+		<button type="button" onclick="descending()">descending</button>
+		<button type="button" onclick="deletecomplete()">making an element undefined</button>
+		<div id="result"></div>
+	</body>
+</html>

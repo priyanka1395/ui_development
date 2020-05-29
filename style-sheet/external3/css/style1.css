@@ -1,0 +1,131 @@
+body{
+	margin:0px;
+}
+#topnav{
+	height:70px;
+	background:#16A085;
+	padding-top:20px;
+	
+}
+
+#topmenu{
+	height:30px;
+	text-align:center;
+}
+
+.menulink{
+	display:inline;
+	margin:30px;
+	
+}
+.menulink a{
+	color:black;
+	font-size:#16A085;
+	font-weight:bold;
+	font-size:16px;
+	padding:10px;
+	text-decoration:none;
+	}
+
+.menulink a:hover{
+	background:#16A085;
+	padding:10px;
+	color:white;
+	font-weight:bold;
+	font-size:16px;
+	border-radius:0px 0px 5px 5px;
+	text-decoration:none;
+}
+
+#active{
+	background:#16A085;
+	padding:10px;
+	color:white;
+	font-weight:bold;
+	font-size:16px;
+	border-radius:0px 0px 5px 5px;
+}
+
+#active a{
+	color:white;
+	text-decoration:none;
+}
+#logotext{
+	color:pink;
+	font-size:25px;
+	margin-left:16%;
+	font-weight:bold;
+	
+}
+
+#imageblock{
+	width:90%;
+	height:180px;
+	margin:auto;
+	
+}
+#lefttext{
+	width:40%;
+	padding:2%;
+	float:left;
+}
+
+
+#rightimage{
+	width:52%;
+	padding:2%;
+	float:left;
+	
+}
+#rightimage img{
+	width:80%;
+	height:125px;
+	margin-top:20px;
+}
+.clearblock{
+	clear:both;
+}
+#infoblock{
+	background:orange;
+	height:15px;
+	padding:6px;
+	padding-left:20%;
+	margin-top:20px;
+	color:blue;
+	font-size:16px;
+}
+.leftblock{
+	width:20%;
+	height:200px;
+	background:aqua;
+	padding-top:20px;
+	float:left;
+	margin:left:5%;
+	color:blue;
+	font-weight:bold;
+	font-size:20px;
+}
+.rightblock{
+	height:200px;
+	width:80%;
+	background:pink;
+	padding-top:20px;
+	float:left;
+	
+	
+}
+#ptext{
+	color:red;
+	font-style:italic;
+}
+
+
+
+
+
+
+
+
+
+
+

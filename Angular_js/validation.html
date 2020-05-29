@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title> Angular Js Validation</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<style>
+			input.ng-touched{
+				
+			border:2px solid red;
+			}
+			input.ng-valid{
+				border:2px solid green;
+			}
+			select.ng-touched{
+				border:2px solid red;
+				
+			}
+			select.ng-valid{
+				border:2px solid green;
+			}
+			textarea.ng-touched{
+				border:2px solid red;
+			}
+				textarea.ng-valid{
+				border:2px solid green;
+			}
+			
+			form.ng-pristine{
+				background-color:skyblue;
+			
+			}
+			form.ng-dirty{
+				background-color:lightgreen;
+			}
+			span{
+				color:red;
+			}
+		</style>
+		<script>
+			var app=angular.module("Mymodule",[]);
+				app.controller("parent",function($scope){
+				
+				
+				});
+		</script>
+	</head>
+	<body ng-app="Mymodule">
+		<div class="container" ng-controller="parent">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<form action="#" class="form-horizontal" method="post" name="myform" novalidate>
+						<div class="form-group">
+							<label>Name</label>
+							<input type="text" name="fname" class="form-control" ng-model="fname" placeholder="Enter your Name" required>
+							<span ng-show="myform.fname.$touched && myform.fname.$invalid">
+								Please Enter Name
+							</span>
+						</div>
+						
+						<div class="form-group">
+							<label>Email</label>
+							<input type="email" class="form-control" name="email" ng-model="email" placeholder="Enter your Email" required>
+							<span ng-show="myform.email.$touched && myform.email.$invalid">
+							
+								<span ng-show="myform.email.$error.required">
+									Email Can't be left blank
+								</span>
+								<span ng-show="myform.email.$error.email">
+									Please Enter valid Email
+								</span>
+							</span>
+						</div>
+						<div class="form-group">
+							<label>Mobile</label>
+							<input type="text" name="mobile" ng-model="mobile" placeholder="Enter your Mobile" ng-pattern="/[0-9]{10}/" maxlength="10" required class="form-control">
+							<span ng-show="myform.mobile.$touched && myform.mobile.$invalid">
+								<span ng-show="myform.mobile.$error.required">
+									mobile cant be left blank
+								</span>
+								<span ng-show="myform.mobile.$error.pattern">
+									less than 10 digits
+								</span>
+								
+							</span>
+						</div>
+						
+						<div class="form-group">
+							<label> City</label>
+							<select ng-model="city" name="city" ng-change="fetchcity(city)" required class="form-control">
+								<option value="">Choose City</option>
+								<option value="pune">pune</option>
+								<option value="patna">patna</option>
+								<option value="delhi">delhi</option>
+								<option value="mumbai">mumbai</option>
+							</select>
+							<span ng-show="myform.city.$touched && myform.city.$invalid">
+								Please Select City
+							
+							</span>
+						
+						</div>
+						
+						<div class="form-group">
+							<label>Message</label>
+							<textarea name="msg" ng-model="msg" class="form-control" required></textarea>
+							<span ng-show="myform.msg.$touched && myform.msg.$invalid">
+								Please Enter Msg
+							</span>
+						</div>
+						
+						
+						<div class="form-group">
+							<input type="checkbox" ng-model="termconditions"> I Agree To Terms & Conditions
+						
+						</div>
+						
+						<div class="form-group">
+							<button type="button" class="btn btn-primary" ng-disabled="!termconditions">Send</button>
+							<button type="button" class="btn btn-primary" ng-disabled="myform.$pristine">Send2</button>
+							
+						</div>
+						
+					</form>
+				
+				
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		
+		</div>
+	
+	</body>
+</html>

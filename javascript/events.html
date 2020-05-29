@@ -1,0 +1,141 @@
+<html>
+    <head>
+	     <title>Events</title>
+		 <style>
+		       #div1{
+			      height:100px;
+				  width:100px;
+				  background-color:red;
+				  border:2px solid blue;
+				  margin:10px;
+				  float:left;
+			   }
+			   #div2{
+			       height:100px;
+				  width:100px;
+				  background-color:grey;
+				  border:2px solid blue;
+				  margin:10px;
+				  float:left;
+			   }
+			   #div3{
+			   
+			      height:100px;
+				  width:100px;
+				  background-color:cyan;
+				  border:2px solid blue;
+				  margin:10px;
+				  float:left;
+			   }
+			   hr{clear:both;}
+		 </style>
+		 <script>
+		       function testclick(){
+			        alert("You clicked once");
+			   }//closes
+			   //==================================//
+			   function testdblclick()
+			   {
+			      alert("You Clicked twice");
+			   }//closes
+			   //===================================//
+			   function testmouseover()
+			   {
+			      document.getElementById("div1").style.backgroundColor="yellow";
+				  document.getElementById("div1").style.height="200px";
+				  document.getElementById("div1").style.width="200px";
+				  document.getElementById("div1").style.border="10px solid bule";
+				  document.getElementById("div1").innerHTML="mouse over event generator";
+				  
+			   }
+			   function testmouseout()
+			   {
+			      document.getElementById("div1").style.backgroundColor="magenta";
+				  document.getElementById("div1").style.height="200px";
+				  document.getElementById("div1").style.width="200px";
+				  document.getElementById("div1").style.border="10px solid bule";
+				  document.getElementById("div1").innerHTML="mouse out event generator";
+				  document.getElementById("div1").innerHTML="";
+			   }
+			   function testmousemove()
+			   {
+			      document.getElementById("div2").style.color="white";
+			      document.getElementById("div2").innerHTML="Mouse move evnt generator";
+			   }
+			   function testmousedown()
+			   {
+			      alert("mousedown enevt generator");
+			   }
+			   function testmouseup()
+			   {
+			      alert("mouse up event generator");
+			   }
+			   function testkeypress()
+			   {
+			      alert("keypress event generate");
+			   }
+			   function testkeyup(){
+			      alert("keyup enevt generated");
+			   }
+			   function testkeydown()
+			   {
+			      alert("key down event generate");
+			    }
+			function testfocus()
+                    {
+					   document.getElementById("t3").style.backgroundColor="lightgreen";
+					}	
+            function testblur(){
+			
+			     document.getElementById("t4").style.backgroundColor="red";
+			}	
+           function fetchcity(city)
+                 {
+				     alert("You have Selected city"+city);
+				  }	
+            function pageload()
+                    {
+					     document.getElementById("b1").style.backgroundColor="powderblue";
+						 alert("onload event generated")
+					}     			
+			   
+		</script>
+	</head>
+	<body onload="pageload()" id="b1">
+	     <h2 align="center">Events in Javascript</h2>
+		 <button onclick="testclick()">Test Click</button>
+		 <button ondblclick="testdblclick()"> Click Twice</button>
+		 <hr>
+		 
+		 <h2 align="center">Mouse Events in Javascript</h2>
+		 <div id="div1" onmouseover="testmouseover()" onmouseout="testmouseout()"></div>
+		 
+		 <div id="div2" onmousemove="testmousemove()" onmouseout="testmouseout()"></div>
+		 
+		 <div id="div3" onmousedown="testmousedown()"></div>
+		 <button type="button" onmouseup="testmouseup()">Mouse up</button>
+		 <hr>
+		  
+		  <h2 align="center">Keyboard Events in Javascript</h2>
+		  Keyress:<input type="text" id="t1" onkeypress="testkeypress()">
+		  Keyup:<input type="text" id="t1" onkeyup="testkeyup()">
+		  keydown:<input type="text" id="t1" onkeydown="testkeydown()">
+		  
+		  <h2 align="center">Textbox Events in Javascript</h2>
+		  
+		  Onfocus:<input type="text" id="t3" onfocus="testfocus()">
+		  Onblur:<input type="text" id="t4" onblur="testblur()">
+		  
+		  
+		  <hr>
+		   <h2 align="center">Onchange Events in Javascript</h2>
+		     <select onchange="fetchcity(this.value)">
+			         <option value="">Choose City</option>
+			         <option value="pune">Pune</option>
+				     <option value="bangalore">Bangalore</option>
+				     <option value="chennai">Chennai</option>
+					 
+			 </select>
+		 
+	</body>
+</html>

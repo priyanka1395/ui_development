@@ -1,0 +1,31 @@
+<html>
+<head>
+         <title>Angular js costom directives</title>
+		 <link rel="stylesheet" href="assets/css/bootstrap.css">
+	     <script src="assets/js/angular.js"></script>
+		 <script>
+		 var app=angular.module("myModule",[]){
+		 app.controller("myModule",function($scope){
+		 });
+		 app.directive("myDirective",function(){
+		 return{
+		 replace:true,
+		 template:"<h3>welcome to directive</h3>"
+
+		 };
+		 });
+		 </script>
+</head>
+<body ng-app="myModule">
+<div class="container" ng-controller="myctrl">
+<div class="row">
+<div class="col-sm-12 well">
+<h4 class="test-center">custome Directive</h4>
+<my-directive></my-directive>
+<my-directive></my-directive>
+  
+</div>
+</div>
+   </div>    
+</body>
+</html>

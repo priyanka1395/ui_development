@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>item list for the veg&nonvage</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			h6,img{
+				display:none;
+				#pic{
+				hight:100px;
+				width:100px;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+			   $("#hide").click(function() {
+				$("#p1").hide(2000);
+				$("h4").show(2000);
+				$("img").show(2000);
+				
+				
+			   })
+			    $("#show").click(function() {
+				$("#p1").show(3000);
+				$("h4").hide(3000);
+				$("img").hide(3000);
+				
+			    })
+				$("#toggle").click(function() {
+				$("#p1").toggle(5000);
+				$("h4").toggle(5000);
+				$("img").toggle(5000);
+				
+			    })
+			
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="text-center"> Show the picture</h3>
+							<img src="assets/imeges/10.jpg" class="img-responsive">
+						</div>
+						<div class="col-sm-2"></div>
+			    <div class="row">
+				
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+						<h3 class="text-center">
+							this is the veg section
+							</h3>
+							</div>
+					  <ul class="list-group">
+					        <li class="list-group-item active">nonvage Item List</li>
+					        <li class="list-group-item">chiken<span class="badge">30
+							</span</li>
+						    <li class="list-group-item">fish<span class="badge">40</span></li>
+						    <li class="list-group-item">chiken<span class="badge">20</span></li>
+							<li class="list-group-item">chiken kopta<span class="badge">20</span></li>
+							<li class="list-group-item">chiken kawab<span class="badge">60</span></li>
+							  
+					  </ul>
+					  
+					     <img src="assets/imeges/9.jpg" class="img-responsive">
+				     </div>
+					 </div>
+					 </div>
+							
+						  <div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+						<h3 class="text-center">
+							this is the vage Section
+							</h3>
+							</div>
+					  <ul class="list-group">
+					        <li class="list-group-item active">vage Item List</li>
+					        <li class="list-group-item">panir<span class="badge">30
+							</span</li>
+						    <li class="list-group-item">masrum<span class="badge">40</span></li>
+						    <li class="list-group-item">kofta<span class="badge">20</span></li>
+							<li class="list-group-item">manchurayan<span class="badge">20</span></li>
+							<li class="list-group-item">govi manchuran<span class="badge">60</span></li>
+							  
+					  </ul>
+					     <img src="assets/imeges/11.jpg" class="img-responsive">
+					 
+			    <div class="col-sm-4">
+				<div class="row">
+			   <div class="col-sm-4">
+			   <img src="assets/imeges/8.jpg" class="img-responsive">
+					
+					</div>
+			      <div class="col-sm-4">
+				</div>
+			   </div>
+			   </div>
+			    <div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-4">
+					
+					<img src="assets/imeges/9.jpg" class="img-responsive">
+					</div>
+			      <div class="col-sm-4">
+			      </div>
+				  </div>
+				  </div>
+				   <div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-4">
+					
+					<img src="assets/imeges/11.jpg" class="img-responsive" id="pic">
+					</div>
+			      <div class="col-sm-4">
+			      </div>
+				  </div>
+				  </div>
+				
+						<div class="panel-footer">
+							<button class="btn btn-danger" id="hide">hide</button>
+							<button class="btn btn-success" id="show">Show</button>
+							<button class="btn btn-primary" id="toggle">Toggle</button>
+						</div>
+					</div>
+				<div class="col-sm-4"></div>
+				
+				
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

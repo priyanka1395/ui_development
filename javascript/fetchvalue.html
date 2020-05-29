@@ -1,0 +1,54 @@
+<html>
+    <head>
+	    <title>fetch the value of textbox</title>
+		
+		<script>
+		       function fetchvalue()
+			   {
+			      var email=document.getElementById("t1").value;
+				  var password=document.getElementById("t2").value;
+				  
+				  document.getElementById("fetchedresult").innerHTML="fetched values are"+email+","+password;
+			   }
+			   
+			   function fetchvaluekey()
+			   {
+			       var email=document.getElementById("t1").value;
+				   document.getElementById("fetchedresult").innerHTML="You typed"+email;
+				   				   
+			   }
+			   function fetchedvaluekey()
+			   {
+			       var password=document.getElementById("t2").value;
+				   document.getElementById("fetchedresult").innerHTML="You typed"+password;
+			   }
+		</script>
+	</head>
+	<body>
+	     <table align="center" bgcolor="skyblue">
+		    <tr>
+			   <th>Email
+			   </th>
+			   <td>
+			     <input type="text" id="t1" onkeypress="fetchvaluekey()">
+			   </td>
+			</tr>
+			
+			<tr>
+			   <th>Password
+			   </th>
+			   <td>
+			      <input type="password" id="t2" onkeypress="fetchedvaluekey()">
+			   </td>
+			</tr>
+			
+			<tr>
+			   
+			   <td>
+			      <button type="button" onclick="fetchvalue()">fetchvalue</button>
+			   </td>
+			</tr>
+		 </table>
+		 <div id="fetchedresult"></div>
+	</body>
+</html>

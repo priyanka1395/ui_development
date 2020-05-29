@@ -1,0 +1,18 @@
+
+<html>
+	<head>
+		<title>attribute selector</title>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('div[title=divtitle1]').css('border','2px solid red');
+			});
+		</script>
+	</head>
+		<body>
+		<div title="divtitle" id="div1">text</div>
+		<div title="divtitle1" id="div2">text</div>
+		<div title="divtitle2" id="div3">text</div>
+		<span title="spantitle3" id="div4">text</span>
+		</body>
+</html>

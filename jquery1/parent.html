@@ -1,0 +1,39 @@
+<html>
+<head>
+        <title>parent</title>
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+		       .ancestors *
+			   {
+			   display:block;
+			    border:2px solid grey;
+				padding:10px;
+			}
+		</style>
+		<script>
+		     $(function(){
+			    $("#span1").children().css("border","2px solid red");
+			    $("#span1").sibilings().css("border","2px solid red");
+			 )}
+		</script>
+</head>
+<body>
+        <div class="ancestors">
+		<div id="p1">(geand grand parent)</div>
+		<div id="p1">(grand parent)</div>
+		<div id="p1">(direct parent)
+		<span id="span"1></span>
+		     <p id="p5">this is a para</p>
+			 </span>
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="siblings">
+		<p> this is para1</p>
+		<p> this is para2</p>
+		<h2> this is heading</h2>
+		<div> this is para1</div>
+		<div> this is para2</div>
+</body>
+</html>

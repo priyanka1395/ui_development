@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title>Add Customer</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="fa/css/font-awesome.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<script src="assets/js/myapp1.js"></script>
+		<style>
+			#star{
+				color:red;
+				width:30px;
+			}
+		</style>
+	</head>
+	<body ng-app="Customer">
+		
+		<div class="container" ng-controller="myctrl">
+		
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+				
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title text-center">
+								<font color="red"><h1><b>Add Customer</b></h1></font>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-sm-4"> Customer Name <i class="fa fa-user"></i></div>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="Enter Customer Name" ng-model="cusname">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4"> Customer Email <i class="fa fa-envelope"></i></div>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="Enter Customer Email" ng-model="cusemail">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4"> Customer Mobile <i class="fa fa-phone"></i></div>
+								<div class="col-sm-8">
+									<input type="number" class="form-control" placeholder="Enter Customer Number" ng-model="cusmobile">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4"> Customer City <i class="fa fa-home"></i></div>
+								<div class="col-sm-8">
+									<select class="form-control" ng-model="cuscity">
+										<option value="">---Choose City---</option>
+										<option value="Bhubaneswar">Bhubaneswar</option>
+										<option value="Bangalore">Bangalore</option>
+										<option value="Mumbai">Mumbai</option>
+										<option value="Delhi">Delhi</option>
+										<option value="Deradun">Deradun</option>
+										<option value="Dubai">Dubai</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-12 text-center">
+									<button type="button" class="btn btn-primary" ng-click="savecustomer()">Save</button>
+								</div>
+								
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+						</div>
+				
+					</div><!--panel end here-->
+				
+				</div>
+				<div class="col-sm-3"></div>
+				
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+				
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-success">
+								<th>Customer Name</th>
+								<th>Customer Email</th>
+								<th>Customer Mobile</th>
+								<th>Customer City</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="c in mycustomer">
+								<td>{{c.cname}}</td>
+								<td>{{c.cemail}}</td>
+								<td>{{c.cmobile}}</td>
+								<td>{{c.ccity}}</td>
+								
+							
+								<td>
+									<button type="button" class="btn btn-danger" ng-click="deletecustomer($index)">
+									
+										<span class="glyphicon glyphicon-trash"></span>
+									
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		
+		</div>
+		
+	</body>
+</html>

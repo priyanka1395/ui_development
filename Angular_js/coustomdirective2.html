@@ -1,0 +1,31 @@
+<html>
+<head>
+         <title>Angular js costom directives</title>
+		 <link rel="stylesheet" href="assets/css/bootstrap.css">
+	     <script src="assets/js/angular.js"></script>
+		 <script>
+		var app=angular.module("mytest",[]);
+		app.controller("myctrl",function($scope){
+		});
+		
+		app.directive("mytest",function(){
+		return{
+		restrict:"M",
+		replace:true,
+		template:"<p> called by attribute"
+		
+		};
+		
+		});
+		
+		 </script>
+</head>
+<body ng-app="mytest">
+      <div ng-controller="myctrl"></div>
+     <h4>costom directives by attribute</h4>
+    <div my-test></my-test>
+	</div my-test></div>
+	<div class="my-test"></div>
+	<!--directive:my-test -->
+</body>
+</html>

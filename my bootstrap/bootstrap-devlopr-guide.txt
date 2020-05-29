@@ -1,0 +1,17 @@
+1. grid system
+2. container
+3. row
+4. col-sm
+5. table
+	table
+	table-bordered
+	table-hover
+6. tr
+	active
+	success
+	danger
+	info
+	warning
+7. pager
+8. pagination
+---------------------------------------------------------------------------------------------

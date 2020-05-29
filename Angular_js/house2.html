@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+	    <title>my home</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.css">
+		<script src="assets/js/angular.js"></script>
+		<style>
+		    #hclr{
+			   color:red;
+			   font-size:20px;
+			}
+			#faclr{
+			  color:green;
+			  font-size:30px;
+			}
+		</style>
+		<script>
+		    var app=angular.module("Myhouse",[]);
+			    app.controller("housecntrl",function($scope){
+				
+				$scope.topbar=["Home","Availabel Rooms","Booking","About Us","Contact Us"];
+				
+			
+			 var room=[{'Title':'bhart nilaya apartment in brookfield','image':'assets/images/0.jpg','description':'0 BHk Rooms','cost':'Rs.20000'},
+			          {'Title':'bhart nilaya aprtment in brookfield','image':'assets/images/0.jpg','description':'2 BHk Rooms','cost':'Rs.300000000'},
+					  
+					   {'Title':'bhart nilaya aprtment in brookfield','image':'assets/images/0.jpg','description':'2 BHk Rooms','cost':'Rs.300000000'},
+					  ];
+				var main=[{'image':'assets/images/2.jpg'}];
+				$scope.mains=main;
+				$scope.rooms=room;
+				
+					  $scope.location=["brookfield","Marthallii","Bilekahalli","Domlure","BTM","JP Nagar"];
+                    
+				});
+		</script>
+	</head>
+	<body ng-app="Myhouse">
+	   <div class="container" ng-controller="housecntrl">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<font color="blue"><h1><b>room For Rent</b></h1></font>
+			</div>
+		</div><!--row end-->
+	  
+	  
+		   <div class="row">
+			   <div class="col-sm-4">
+				 <ul class="list-group">
+					<li class="list-group-item active"><i class="glyphicon glyphicon-globe" id="faclr"></i><h3>Locations</h3></li>
+
+				   <li class="list-group-item" ng-repeat="l in location"><a>{{l}}</a></li>
+				 </ul> <br>
+				 
+			   </div><!--col4 end-->
+			   
+			   <div class="col-sm-8" >
+				   <div class="row bg-info" ng-repeat="room in rooms">
+							<div class="col-sm-2"></div>
+						   {{room.Title}}
+						   <h3 class="text-center">1 & 2 BHK in brookfield</h3>
+								 <div class="col-sm-8 text-center">
+									 <img ng-src="{{room.image}}" height="100px" width="400px" class="img-rounded"><br><br>
+									 <p class="bg-primary text-center">{{room.description}}...
+									 <button type="button" class="btn btn-warning">Get Owner Details</button>
+									 {{room.cost}}
+									</p>
+									
+									<button type="button" class="btn btn-default">
+										   <span class="glyphicon glyphicon-heart" id="hclr"></span>
+										 &nbsp;&nbsp;<i>Add to favourite</i>
+									 </button>
+									  
+								</div>
+						   <div class="col-sm-2"></div>
+					</div><!--col8 row end-->
+			  
+			   </div> <!--col8 end-->
+			   
+			   
+		   </div> <!--row end-->
+	   </div> <!--container end-->
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>relative</title>
+<style>
+#div1{
+height:300px;
+width:300px;
+position:relative;
+border:2px solid green;
+}
+#div2{
+  height:200px;
+  width:200px;
+  border:2px solid red;
+  overflow:hidden;
+  background-color:red;
+  opacity:0.3;
+  background-bottom:100%;
+  -webkit-transition:height 4s;
+  transition:height 4s;
+  
+  }
+#div1:hover #div2{
+height:300px;
+}
+</style>
+</head>
+<body>
+     <section>
+	<div id="div1">
+	
+	<div id="div2">
+	hello world
+	<img src="img/1.jpg" height="300px" width="300px"></div>
+	
+	</div>
+	
+	 </section>
+</body>
+</html>

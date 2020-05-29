@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Working with function</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<script src="assets/js/angular.js"></script>
+	<script>
+		var app=angular.module("Myblogsapp",[]);
+		app.controller("myctrl",function($scope){
+			var blogs=[{'title':'Lion','image':'assets/images/2.jpg','description':'Lion is fearless','likes':0,'dislikes':0},
+			{'title':'fish','image':'assets/images/1.jpg','description':'This is fish','likes':0,'dislikes':0},
+			{'title':'lighthouse','image':'assets/images/1.jpg','description':'This is lighthouse','likes':0,'dislikes':0},
+			{'title':'flower','image':'assets/images/2.jpg','description':'you like flower','likes':0,'dislikes':0},
+			{'title':'Pengvin','image':'assets/images/1.jpg','description':'pangvin','likes':0,'dislikes':0}
+		];
+		$scope.myblogs=blogs;
+		});
+	</script>
+</head>
+<body ng-app="Myblogsapp">
+	<div class="container" ng-controller="myctrl">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<div class="panel panel-primary" ng-repeat="blog in myblogs">
+					<div class="panel-heading">
+						<div class="panel-title">{{blog.title}}</div>
+					</div>
+					<div class="panel-body text-center">
+						<img ng-src="{{blog.image}}" height="300px" width="300px" class="img-thumbnail"><br>
+						<p class="bg-warning text-left">{{blog.description}}......
+						<button class="btn btn-warning">ViewMore...</button>
+						</p>
+					</div>
+					<div class="panel-footer"></div>
+				</div>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+</body>
+</html>

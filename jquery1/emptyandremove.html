@@ -1,0 +1,45 @@
+<html>
+   <head>
+          <title>Empty() Remove()</title>
+		  <script src="assets/js/jquery.min.js"></script>
+		  <style>
+		           #div1{
+				   background-color:red;
+			    height:100px;
+				width:100px;
+				background-color:red;
+				boder:2px solid green;
+				margin:10px;
+				}
+				  #div2{
+				   background-color:red;
+			    height:100px;
+				width:100px;
+				background-color:red;
+				boder:2px solid green;
+				margin:10px;
+				}
+				
+		  </style>
+		  <script>
+		        $(function(){
+				   $("#btn1").click(function(){
+				   $("#div1").Remove();
+				   })
+				    $("#btn1").click(function(){
+				   $("#div2").Empity();
+				   })
+				   });
+		  </script>
+   </head>
+   <body>
+        <div id="div1">
+		    this is the para
+			</div>
+			<div id="div2">
+		    <p>this is the para</p>
+			</div>
+			<button id="btn1">Remove</button>
+			<button id="btn2">Empty</button>
+   </body>
+</html>

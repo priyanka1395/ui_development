@@ -1,0 +1,25 @@
+<html>
+<head>
+     <title>two way data binding</title>
+	  <script src="assets/css/bootstrap.css" rel="stylesheet"></script>
+	 <script src="assets/js/angular.js"></script>
+	 <script>
+	     var app=angular.module("mymodule",[]);
+		 app.controller("parents",function($scope){
+		 });
+		 app.controller("child",function($scope){
+		 $scope.msg="welcome to angular";
+		 });
+		 
+	 </script>
+</head>
+<body ng-app="mymodule">
+<div class="container" ng-controller="parents">
+{{20+50}}
+{{msg}}
+</div>
+<div class="container" ng-controller="child">
+{{msg}}
+</div>
+</body>
+</html>

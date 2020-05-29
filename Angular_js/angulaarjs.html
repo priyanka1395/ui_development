@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>json data</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+	</head>
+	<body ng-app="" ng-init=
+	"customer=[{'title':'enginer','destation':'working','qulification':'b.tech','employy':'working'},
+
+	{'title':'enginer','destation':'working','qulification':'b.tech','employy':'working'},
+	{'title':'enginer','destation':'working','qulification':'enginer','employy':'working1'},
+	{'title':'student','destation':'working','qulification':'student','employy':'working2'},
+	{'title':'student','destation':'working','qulification':'student','employy':'working3'},
+	{'title':'student','destation':'working','qulification':'student','employy':'working4'},
+	]">
+<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				</div>
+				<div class="col-sm-8">
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-primary">
+								<th>title</th>
+								<th>destation</th>
+								<th>qulification</th>
+								<th>employy</th>
+		
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="c in customer">
+								<td>{{c.title}}</td>
+								<td>{{c.destation}}</td>
+								<td>{{c.qulification}}</td>
+								<td>{{c.employy}}</td>
+								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

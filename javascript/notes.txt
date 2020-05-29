@@ -1,0 +1,23 @@
+JAVASCRIPT
+-------------
+document-
+write-it is the method for print the value of var.
++ -- use for concating .
+function-- a block of code designed to a particular task/ a fundamental buliding block/use to execute a specific task again n again
+prompt-takes the input from user.bulitin event
+onclick(bulit in)-action by the click.is a event
+fetch- user defined--it is a function
+alert- to display something.  is a method of window object
+confirm-- confirms the action of the user
+event-action of the popup box.
+getElementById-what is the given id to call
+innerHTML-to change the content of the perticular element dynamically
+-------------------
+Addition
+--------
+parseInt-convert string to integer
+parseFloat-convert string to float
+Conditions and loops
+--------------------
+students mark in switchcase 
+take 10 students marks and add it n store in array n execute it in for loop

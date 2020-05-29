@@ -1,0 +1,74 @@
+<html>
+	<body>
+		<fieldset>
+			<legend>Form Tags List</legend>
+			<form method="POST" action="saveuser.php">
+				<p>
+					Textbox: <input type="text" placeholder="Enter ur name" name="fname" id="fname" class="abc" maxlength="10" size="50" 
+					readonly="readonly" value="MR..."  disabled="disabled" tabindex="5" accesskey="z">
+				</p>
+				
+				<p>
+					Password: <input type="password" placeholder="Enter u r Password" tabindex="2" accesskey="p" name="upassword" class="abc" id="upassword"> 
+				</p>
+				
+				<p>
+					Select:
+					<select tabindex="1" name="ucity" id="ucity">
+						<option value=""> Choose Option</option>
+						<option value="1"> Bangalore</option>
+						<option value="2" selected="selected"> Chennai</option>
+						<option value="3"> Rajkot</option>
+						<option value="4"> Delhi</option>
+					</select>
+				</p>
+				
+				<p>
+					Select optgroup
+					<select name="city2" id="city2">
+						<option value="">city </option>
+						
+							<optgroup label="karnataka">
+							<option value="1">k1</option>
+							<option value="2">k2</option>
+							<option value="3">k3</option>
+						</optgroup>
+						
+						<optgroup label="Mp">
+							<option value="1">k1</option>
+							<option value="2">k2</option>
+							<option value="3">k3</option>
+						</optgroup>
+					</select>
+				</p>
+				
+				<p>
+				
+				Textarea: <br>
+					<textarea placeholder="enter u r address" maxlength="100" cols="50" rows="10" name="address" id="address"></textarea>
+				</p>
+				
+				<p>
+					File:<input type="file" name="userfile" id="userfile">
+				</p>
+				
+				<p>
+					Radio Button:
+					<input type="radio" name="gender" id="male" value="M">Male
+					<input type="radio" name="gender" id="female" value="F">female
+				</p>
+				
+				<p>
+					Checkbox:<input type="checkbox" name="item[]" id="item1" value="A">Apple
+						<input type="checkbox" name="item[]" id="item1" value="B">Banana
+						<input type="checkbox" name="item[]" id="item1" value="M">Mango
+						<input type="checkbox" name="item[]" id="item1" value="G">Grapes
+						
+				</p>
+				
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+		</fieldset>
+		</form>
+	</body>
+</html>

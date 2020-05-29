@@ -1,0 +1,6 @@
+json
+javascript object natation.
+var persion={
+firstname:"abc";
+lastname:"xyz";
+.pass method using json.

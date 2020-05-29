@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+      <head>
+	      <title>type=image</title>
+	  </head>
+	  <body>
+	       <form action="savedata.html" method="post" novalidate>
+		      <table bgcolor="skyblue" align="center">
+			  <tr>
+			      <th>min date</th>
+				  <td><input type="date" name="formdata" min="2018-01-1" required></td>
+				  </tr>
+				  <tr>
+			      <th>max date</th>
+				  <td><input type="date" name="formdata" max="2018-02-21" required></td>
+				  </tr>
+				  <tr>
+				  <th>uploded multiple photo</th>
+				  <td>
+				  <input type="file" name="photo" multiple required>
+				  </td>
+				  </tr>
+				  <tr>
+				  <th>stoke</th>
+				  <td><input type="number" step="10" required></td>
+				  </tr>
+				  <tr>
+				  <th>stoke</th>
+				  <td><input type="number" min="1" max="10" required></td>
+				  </tr>
+				  
+				  <tr>
+				  <th>citynames</th>
+				  <td>
+				  <input list="citynames" required>
+				  <datalist id="citynames">
+				  <option value="pune">
+				  </option>
+				  <option value="kolkata">
+				  </option>
+				  <option value="mumbai">
+				  </option>
+				  <option value="patna">
+				  </option>
+				  <option value="channi">
+				  </option>
+				  <datalist>
+				  </td>
+				  </tr>
+				  <tr>
+				  <th>name</th>
+				  <td><input type="text" name="fname" pattern="[A-Z a-z]{10}"
+				      title="please enter 10 letter only" required >
+					   </td>
+				  </tr>
+				  
+				   <tr>
+				  <th>mobile</th>
+				  <td><input type="tel" name="fname" pattern="[0-9]{10}"
+				      oninvalid=" this.setCustomValidity('please enter 10 letter only')" 
+					   oninput="setCustomValidity('')"required >
+					   </td>
+				  </tr>
+				  <tr>
+				  <td colspan="2" align="center">
+				  <input type="image" height="100px" width="100px" src="1.jpg">
+				  
+				  
+				  </tr>
+				  </table>
+				  </form>
+	  </body>
+</html>

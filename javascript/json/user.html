@@ -1,0 +1,45 @@
+<html>
+  <head>
+        <title>
+		      external json
+		    </title>
+			<script>
+			          function fetchexternal{
+					  
+					  	var xhttp;
+				  if (window.XMLHttpRequest) {
+					// code for modern browsers
+					xhttp = new XMLHttpRequest();
+					} else {
+					// code for IE6, IE5
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  var mydata=json.parse(this.responseText);
+					  
+					  var data="<table bgcolor='skyblue' align='center'>";
+					  data="<tr><th>Name</th><th>mobile</th><th>city</th></tr>"
+					  for(var i=0;i<mydata.length;i++)
+					{
+					data=data+"<tr>";
+					data=data+"<td>"+mydata[i].name+"<td>";
+					data=data+"<td>"+mydata[i].mobile+"<td>";
+					data=data+"<td>"+mydata[i].city+"<td>";
+					data=data+"</tr>";
+
+					}
+					  data=data+"</table>";
+					}
+					document.getElementById("result").innerHTML=data;
+				  };
+				  xhttp.open("GET", "user.json", true);
+				  xhttp.send();
+					  }
+			</script>
+  </head>
+  <body>
+         <button onclick="fetchexternaljson()">fetch external json data</button>
+		 <div id="result"></div>
+     </body>
+</html>

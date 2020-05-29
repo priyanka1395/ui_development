@@ -1,0 +1,25 @@
+
+<html>
+	<head>
+		<title>ng-init</title>
+		<script src="assets/js/angular.js"></script>
+	</head>
+	<body ng-app="" ng-init="fruits=['apple','banana','orange','strawbery'];">
+		<ul>
+			<li ng-repeat="f in fruits">{{f}}</li>
+		</ul>
+		<table>
+		<tr><th>names of fruits</th></tr>
+			<tr ng-repeat="x in fruits">
+				<td>{{x}}</td>
+			</tr>
+		</table>
+		<label ng-repeat="y in fruits">{{y}}<input type="text"></label><br><hr>
+		<label ng-repeat="z in fruits"><input type="checkbox">{{z}}</label><br><hr>
+		<select ng-model="fr">
+			<option ng-repeat="a in fruits">{{a}}</option>
+		</select>
+		
+		
+	</body>
+</html>

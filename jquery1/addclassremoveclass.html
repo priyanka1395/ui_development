@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <title>Add class Remove class</title>
+	  <script src="assets/js/jquery.min.js"></script>
+	  <style>
+	           #link,#link2,#link3,#link4{
+			   text-decoration:none;
+			   color:red;
+			   font-size:15px;
+			   margin:10px;
+			   font-weight:bold;
+			   }
+			   .active{
+			   color:blue;
+			   background-color:yellow;
+			   font-size:20px;
+			   font-weight:bold;
+			   border:2px solid green;
+			   }
+	  </style>
+	  <script>
+	         $(function(){
+			    $("#link1").click(function(){
+				    $("#link1").addClass('Active');
+					 $("#link1").removeClass('Active');
+					  $("#link1").removeClass('Active');
+				     )}
+					  $("#link2").click(function(){
+				    $("#link2").addClass('Active');
+					 $("#link1").removeClass('Active');
+					  $("#link1").removeClass('Active');
+				     )}
+					  $("#link3").click(function(){
+				    $("#link3").addClass('Active');
+					 $("#link1").removeClass('Active');
+					  $("#link1").removeClass('Active');
+				     )}
+					  $("#link4").click(function(){
+				    $("#link3").addClass('Active');
+					 $("#link2").removeClass('Active');
+					  $("#link1").removeClass('Active');
+				     )}
+					 )};
+	  </script>
+   </head>
+   <body>
+         <center>
+		        <a href="#" id="link1">Home</a>
+				<a href="#" id="link2">About</a>
+				<a href="#" id="link3">Services</a>
+				<a href="#" id="link4">Contact</a>
+		 </center> 
+   </body>
+</html>

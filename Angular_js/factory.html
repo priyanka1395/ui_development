@@ -1,0 +1,27 @@
+<html>
+<head>
+     <title> services in angular.js</title>
+	 <script src="assets/js/angular.js"></script>
+	 <script>
+	     var app=angular.module("myapp",[]);
+		 app.service("mysevice",function(){
+		     var obj={};
+		   obj.getName=function()
+		   {
+		       return "I am comming form factory";
+			   }
+			   return obj
+			  
+		 });
+		 app.controller("myctrl",function($scope,mysevice)
+		 {
+		   $scope.msg=mysevice.getName();
+		 });
+	 </script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="myctrl">
+{{msg}}
+</div>
+</body>
+</html>

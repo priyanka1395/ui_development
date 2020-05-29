@@ -1,0 +1,143 @@
+<html>
+       <head>
+	           <title>design contact</title>
+			  
+			    <link rel="stylesheet" href="assets/css/bootstrap.css">
+				 <script src="assets/js/jquery.min.js"></script>
+				<style>
+				      
+				</style>
+				<script>
+				           $(function(){
+						       $("#btn1").click(function(){
+							      var name=$("#fname").val().trim();
+								   var email=$("#email").val().trim();
+								    var mobile=$("#mobile").val().trim();
+									 var city=$("#city").val();
+									  var message=$("#message").val().trim();
+									  var status=true;
+									  if(name=="")
+									  {
+									 status=false;
+									  $("#fname").css("border","2px solid red");
+									  }
+									  else
+									  {
+									  $("#fname").css("border","2px solid green");
+									  }
+						//=======================email=============================//
+						 if(email=="")
+									  {
+									 status=false;
+									  $("#email").css("border","2px solid red");
+									  }
+									  else
+									  {
+									  $("#email").css("border","2px solid green");
+									  }
+						//=======================mobile=============================//
+						 if(mobile=="")
+									  {
+									 status=false;
+									  $("#mobile").css("border","2px solid red");
+									  }
+									  else
+									  {
+									  $("#mobile").css("border","2px solid green");
+									  }
+						//=======================city=============================//
+						if(city=="")
+									  {
+									 status=false;
+									  $("#city").css("border","2px solid red");
+									  }
+									  else
+									  {
+									  $("#city").css("border","2px solid green");
+									  }
+						//=======================message=============================//
+						if(message=="")
+									  {
+									 status=false;
+									  $("#message").css("border","2px solid red");
+									  }
+									  else
+									  {
+									  $("#message").css("border","2px solid green");
+									  }
+									  //=====if status is true then only submit my form====//
+									  if(status==true)
+									  {
+									       $("#f1").submit();
+										  $("#success").text(thank you,we will contact u soon");
+									  }
+						 //==============================================//
+						)};
+						));
+								  
+				</script>
+	     </head>
+		 <body>
+		      <div class="container">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+				<h3 class="bg-success" id="success"></h3>
+				<form action="#" method="post" id="f1">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="text-center">Contact design</h3>
+							<div class="form-group">
+				       <label>fname</label>
+					   <input type="text" class="form-control" placeholder="id=fname">
+				   </div>
+				   
+				   <div class="form-group">
+				       <label>Email</label>
+					   <input type="text" class="form-control" placeholder="id=Email">
+				   </div>
+				    <div class="form-group">
+				       <label>mobile no</label>
+					   <input type="text" class="form-control"
+					   placeholder="id=mobile no">
+				   </div>
+				   <div class="row form-group">
+					<div class="col-sm-2">city</div>
+					  <div class="col-sm-4">
+					    <select tabindex="1" name="ucity" id="ucity">
+						<option value="1"> bangalore</option>
+						<option value="2" selected="Degree:">choose</option>
+						<option value="3"> pune</option>
+						<option value="4"> kolkata</option>
+					</select>
+		                </div>
+					  </div>
+				   
+				   <div class="form-group">
+				       <label>message</label>
+					   <textarea class="form-control" placeholder="id=message"></textarea>
+				   </div>
+			   </div>
+			   
+			      <div class="row form-group">
+				      <div class="col-sm-12 text-center">
+					  
+			         <button type="button" id="btn1" class="btn btn1-primary">send</button>
+					 <button type="reset" id="btn2" class="btn btn1-primary">clear</button>
+					 <form>
+			
+			  </div>
+			     
+			   </div>
+			   <div class="col-sm-3"></div>
+			  </div>
+			 
+		  
+		  
+		  </div>
+		  </div>
+		</div>
+					
+		 </body>
+		 
+</html>

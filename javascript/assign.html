@@ -1,0 +1,313 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<style>
+			i{color:red;}
+		</style>
+		<script>
+			function validate()
+			{
+			var name=document.getElementById("fname").value;
+			var email=document.getElementById("email").value;
+			var mobile=document.getElementById("mobile").value;
+			var city=document.getElementById("city").value;
+			var state=document.getElementById("state").value;
+			var address=document.getElementById("address").value;
+			var qualification=document.getElementById("qualification").value;
+			var univercity=document.getElementById("univercity").value;
+			var experience=document.getElementById("experience").value;
+			var male=document.getElementById("male").checked;
+			var female=document.getElementById("female").checked;
+			var course1=document.getElementById("course1").checked;
+			var course2=document.getElementById("course2").checked;
+			var course3=document.getElementById("course3").checked;
+			var course4=document.getElementById("course4").checked;
+			
+				name=name.trim();
+				email=email.trim();
+				mobile=mobile.trim();
+				address=address.trim();
+				if(name=="")
+				{
+					document.getElementById("nameerror").innerHTML="invalid name";
+					document.getElementById("fname").style.borderColor="red";
+					
+				}
+				else{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("nameerror").innerHTML="";
+				}
+				//.......for email..............//
+				if(email=="")
+				{
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="invalid email";
+				}
+				else
+				{
+					document.getElementById("email").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				if(mobile=="")
+				{
+				document.getElementById("mobile").style.borderColor="red";
+				document.getElementById("mobileerror").innerHTML="invalid mobile no";
+				}
+				else{
+					document.getElementById("mobile").style.borderColor="green";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				if(city=="")
+				{
+				document.getElementById("city").style.borderColor="red";
+				document.getElementById("cityerror").innerHTML="invalid city";
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("cityerror").innerHTML="";
+				}
+				if(state=="")
+				{
+					document.getElementById("state").style.borderColor="red";
+					document.getElementById("stateerror").innerHTML="invalid state";
+				}
+				else
+				{
+					document.getElementById("state").style.borderColor="green";
+					document.getElementById("stateerror").innerHTML="";
+				}
+				if(address=="")
+				{
+					document.getElementById("address").style.borderColor="red";
+					document.getElementById("addresserror").innerHTML="invalid address";
+				}
+				else{
+					document.getElementById("address").style.borderColor="green";
+					document.getElementById("addresserror").innerHTML="";
+				}
+				if(qualification=="")
+				{
+					document.getElementById("qualification").style.borderColor="red";
+					document.getElementById("qualificationerror").innerHTML="invalid";
+				}
+				else{
+					document.getElementById("qualification").style.borderColor="green";
+					document.getElementById("qualificationerror").innerHTML="";
+				}
+				if(univercity=="")
+				{
+					document.getElementById("univercity").style.borderColor="red";
+					document.getElementById("univercityerror").innerHTML="invalid";
+				}
+				else{
+					document.getElementById("univercity").style.borderColor="green";
+					document.getElementById("univercityerror").innerHTML="";
+				}
+				if(experience=="")
+				{
+					document.getElementById("experience").style.borderColor="red";
+					document.getElementById("experienceerror").innerHTML="invalid";
+				}
+				else{
+					document.getElementById("experience").style.borderColor="green";
+					document.getElementById("experienceerror").innerHTML="";
+				}
+				//===========for gender=============//
+				if(male==true||female==true)
+				{
+					document.getElementById("gendererror").innerHTML="";
+				}
+				else{
+					document.getElementById("gendererror").innerHTML="please select the gender";
+				}
+				///=======for hobby================//
+				if(course1==true||course2==true||course3==true||course4==true)
+				{
+					document.getElementById("courseerror").innerHTML="";
+				}
+				else{
+					document.getElementById("courseerror").innerHTML="please select the course";
+				}
+			
+			}
+		</script>
+	</head>
+		<body>
+				<div class="container well">
+				<div class="row form-group">
+				<div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-4">
+					<label>name</label>
+					</div>
+			      <div class="col-sm-8">
+			  <input type="text" name="fname" id="fname" class="form-control">
+				<i id="nameerror"></i>
+				</div>
+			   </div>
+			   </div>
+			   
+			   <div class="col-sm-4">
+				<div class="row">
+			   <div class="col-sm-4">
+					<label>email</label>
+					</div>
+			      <div class="col-sm-8">
+			  <input type="text" name="email" id="email" class="form-control">
+				<i id="emailerror"></i>
+				</div>
+			   </div>
+			   </div>
+			   <div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-4">
+					<label>mobile</label>
+					</div>
+			      <div class="col-sm-8">
+			  <input type="text" name="mobile" id="mobile" class="form-control">
+				<i id="mobileerror"></i>
+				</div>
+			   </div>
+			   
+					</div>
+					</div>
+					
+				<br><br>
+				<div class="row form-group">
+				<div class="col-sm-4">
+				<div class="row">
+				<div class="col-sm-4">
+					<label>city</label>
+				</div>
+				<div class="col-sm-8">
+					<select id="city" class="form-control">
+						
+						<option value=""></option>
+						<option value="bangalore">bangalore</option>
+						<option value="pune">pune</option>
+						<option value="chennai">chennai</option>
+					</select>
+					<i id="cityerror"></i>
+				</div>
+				</div>
+				</div>
+				
+				
+			<div class="col-sm-4">
+				<div class="row">
+				<div class="col-sm-4">
+					<label>state</label>
+				</div>
+				<div class="col-sm-8">
+					<select id="state" class="form-control">
+						<option value=""></option>
+						<option value="karnataka">karnataka</option>
+						<option value="maharastra">maharastra</option>
+						<option value="tn">tn</option>
+					</select>
+					<i id="stateerror"></i>
+				</div>
+				</div>
+				</div>
+				<div class="col-sm-4">
+				<div class="row">
+			<div class="col-sm-4">
+					<label>address</label>
+				</div>
+				<div class="col-sm-8">
+					<textarea id="address" class="form-control"></textarea>
+					<i id="addresserror"></i>
+					
+				</div>
+				</div>
+				</div>
+				</div>
+				<br><br>
+				<div class="row form-group">
+				<div class="col-sm-4">
+				<div class="row">
+				<div class="col-sm-4">
+					<label>qualification</label>
+				</div>
+				<div class="col-sm-8">
+					<select id="qualification" class="form-control">
+						<option value=""></option>
+						<option value="10th">10th</option>
+						<option value="12th">12th</option>
+						<option value="graduate">graduate</option>
+					</select>
+					<i id="qualificationerror"></i>
+				</div>
+				</div>
+				</div>
+				<div class="col-sm-4">
+				<div class="row">
+				<div class="col-sm-4">
+					<label>univercity</label>
+				</div>
+				<div class="col-sm-8">
+					<select id="univercity" class="form-control">
+						<option value=""></option>
+						<option value="abcd">abcd</option>
+						<option value="efgh">efgh</option>
+						<option value="ijkl">ijkl</option>
+					</select>
+					<i id="univercityerror"></i>
+				</div>
+				</div>
+				</div>
+				<div class="col-sm-4">
+				<div class="row">
+				<div class="col-sm-4">
+					<label>experience</label>
+				</div>
+				<div class="col-sm-8">
+					<select id="experience" class="form-control">
+						<option value=""></option>
+						<option value="1yr">1yr</option>
+						<option value="2yr">2yr</option>
+						<option value="3yr">3yr</option>
+					</select>
+					<i id="experienceerror"></i>
+				</div>
+				</div>
+				</div>
+				</div>
+				<br><br>
+				
+				<div class="row">
+				<div class="col-sm-4">
+					<label>gender</label>
+				</div>
+				<div class="col-sm">
+					<input type="radio" name="gender" value="m" id="male">male
+					<input type="radio" name="gender" value="f" id="female">female
+					<i id="gendererror"></i>
+					
+				</div>
+				<div class="col-sm">
+					<label>course</label>
+				</div>
+				<div class="col-sm-12">
+					<input type="checkbox" name="course" value="java" id="course1">java
+					<input type="checkbox" name="course" value=".net" id="course2">.net
+					<input type="checkbox" name="course" value="php" id="course3">php
+					<input type="checkbox" name="course" value="python" id="course4">python
+					<i id="courseerror"></i>
+					
+				</div>
+				</div>
+			<div class="form-group">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+				
+				<button class="btn btn-primary"	type="button" onclick="validate()">register</button>
+				<button class="btn btn-primary">Clear</button>
+				
+				</div>
+			</div>
+			</div>
+				</div>
+		</body>
+</html>

@@ -1,0 +1,43 @@
+
+<html>
+	<head>
+		<title>json data</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+	</head>
+	<body ng-app="" ng-init="customer=[{'name':'jagu','email':'jagu@gmail.com','mobile':'111111111','city':'pune'},
+	{'name':'chiku','email':'chiku@gmail.com','mobile':'222222222','city':'jharkhand'},
+	{'name':'priya','email':'priya@gmail.com','mobile':'33333333','city':'delhi'},
+	{'name':'tiya','email':'tiky@gmail.com','mobile':'44444444','city':'mumbai'},
+	{'name':'riku','email':'riku@gmail.com','mobile':'5555555555','city':'gujrat'},
+	{'name':'muku','email':'muku@gmail.com','mobile':'6666666666','city':'amdhra'},
+	{'name':'tiku','email':'tiku@gmail.com','mobile':'7777777777','city':'orissa'}
+	]">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				</div>
+				<div class="col-sm-8">
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-primary">
+								<th>name</th>
+								<th>email</th>
+								<th>mobile</th>
+								<th>city</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="c in customer">
+								<td>{{c.name}}</td>
+								<td>{{c.email}}</td>
+								<td>{{c.mobile}}</td>
+								<td>{{c.city}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

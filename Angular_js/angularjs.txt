@@ -1,0 +1,6 @@
+<html>
+<head>
+     <title>angular revision</title>
+	  <script src="assets/css/bootstrap.css" rel="stylesheet"></script>
+	 <script src="assets/js/angular.js"></script>
+</head>

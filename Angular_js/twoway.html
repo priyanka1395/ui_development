@@ -1,0 +1,21 @@
+<html>
+<head>
+       <title>two way binging</title>
+	   <script src="assets/css/bootstrap.css" rel="stylesheet"></script>
+	 <script src="assets/js/angular.js"></script>
+	 <script>
+	        var app=angular.module("myapp",[]);
+			app.controller("myctrl",function($scope){
+			$scope.fname="angular";
+			});
+	 </script>
+</head>
+<body ng-app="myapp">
+<div class="container" ng-controller="myctrl">
+<input type="text" ng-model="fname" class="form-control">
+you typed: {{fname}}
+<p ng-bind="fname"></p>
+</div>
+
+</body>
+</html>

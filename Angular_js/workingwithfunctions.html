@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Working with Functions</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<script>
+			var app=angular.module("Myblogsapp",[]);
+			app.controller("myctrl",function($scope){
+				var blogs=[{'title':'Jellyfish','image':'assets/images/Jellyfish.jpg','description':'Jellyfish is a Sea Fish','likes':0,'dislikes':0},
+				{'title':'Light House','image':'assets/images/Lighthouse.jpg','description':'Lighthouse is very beautiful ','likes':0,'dislikes':0},
+				{'title':'Penguin','image':'assets/images/Penguins.jpg','description':'Penguins are true friend of Humans','likes':0,'dislikes':0},
+				{'title':'Tulips','image':'assets/images/Tulips.jpg','description':'Tulis is a Beautiful flowers','likes':0,'dislikes':0}
+				];
+				
+				$scope.myblogs=blogs;
+				
+				$scope.incrementlikes=function(blog){
+					blog.likes++;
+				}
+				
+				$scope.incrementdislikes=function(blog){
+					blog.dislikes++;
+				}
+				
+				
+			
+			//=============================================================//
+			});
+		</script>
+	</head>
+	<body ng-app="Myblogsapp" background="assets/images/Jellyfish.jpg">
+	
+		<div class="container" ng-controller="myctrl">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+				
+					<div class="panel panel-primary" ng-repeat="blog in myblogs">
+						<div class="panel-heading text-center">
+							<div class="panel-title">{{blog.title}}</div>
+						</div>
+						<div class="panel-body text-center">
+							<img ng-src="{{blog.image}}" height="300px" width="300px" class="img-thumbnail"><br>
+							<p class="bg-warning">{{blog.description}}</p>
+							<button class="btn btn-warning">View More...</button>
+						</div>
+						<div class="panel-footer text-center">
+							<button type="button" class="btn btn-info" ng-click="incrementlikes(blog)">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</button>&nbsp;&nbsp;<i>Total Likes:{{blog.likes}}</i>
+							
+							<button type="button" class="btn btn-danger" ng-click="incrementdislikes(blog)">
+								<span class="glyphicon glyphicon-thumbs-down"></span>
+							</button>&nbsp;&nbsp;<i>Total Dislikes:{{blog.dislikes}}</i>
+						</div>
+					</div>
+				
+				</div>
+				<div class="col-sm-2"></div>
+			
+			</div>
+			
+		</div>
+		
+	
+	</body>
+
+</html>

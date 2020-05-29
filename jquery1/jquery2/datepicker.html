@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+	<link href="jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+<!-- Datepicker -->
+
+            <div class="container">
+			<h3 class="bg-success" id="success"></h3>
+			<div class="row well">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+				
+				<h2 class="demoHeaders">Datepicker</h2>
+                <input type="text" id="datepicker">
+				</div>
+				</div>
+				</div>
+<!-- Progressbar -->
+<h2 class="demoHeaders">Selectmenu</h2>
+<select id="selectmenu">
+	<option>Slower</option>
+	<option>Slow</option>
+	<option selected="selected">Medium</option>
+	<option>Fast</option>
+	<option>Faster</option>
+</select>
+<script>
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+</script>
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+				
+</body>
+</html>

@@ -1,0 +1,205 @@
+<html>
+    <head>
+	    <style>
+		     
+			  body{
+			      background:skyblue;
+				  
+			  }
+			  #container{
+			    background:white;
+				width:90%;
+				min-height:600px;
+				margin:auto;
+				border-radius:5px;
+				
+			  }
+			  #top{
+			     background:grey;
+				 height:70px;
+				 border-bottom:2px solid red;
+			  }
+			  #menublock{
+			     background:pink;
+				 height:30px;
+				 border-bottom:2px solid red;
+				 text-align:center;
+			  }
+			  #menulink{
+			      margin-right:20px;
+				  text-decoration:none;
+				  font-size:20px;
+				  color:green;
+				  font-weight:bold;
+			  }
+			  
+			  #menulink:hover{
+			     color:red;
+				 text-decoration:underline;
+			  }
+			  
+			  #left{
+			       width:25%;
+				   background:orange;
+				   height:494px;
+				   float:left;
+			  }
+			   #right{
+			       width:75%;
+				   background:#f9f9f9;
+				   height:494px;
+				   float:left;
+			  }
+			  
+			  #left a{
+			     display:block;
+				 margin:20px;
+				 text-decoration:none;
+				 font-size:18px;
+				 color:cyan;
+				 font-weight:bold;
+			  }
+			  #left a:hover{
+			     color:blue;
+				 text-decoration:underline;
+			  }
+			  #clearblock{
+			      clear:both;  
+			  }
+			  
+			  #footerblock{
+			    background:cyan;
+				border-top;
+				height:100px;
+				border-radius:0px 0px 5px 5px;
+			  }
+			  
+			  .circle{
+			     width:31%;
+				 margin:1%;
+				 float:left;
+				 background:#008080;
+				 color:white;
+				 text-align:center;
+				 height:150px;
+				 border-radius:10px;
+				 
+			  }
+			  
+			  
+			  fieldset{
+			   border-radius:10px;
+			   width:40%;
+			   margin:auto;
+			   padding:10px;
+			  }
+			 .circle:hover{
+			    background:red;
+			 }
+			 .active{
+			 
+			    color:red !important;
+				text-decoration:underline !important;
+			 }
+			 .inputbox{
+			  height:27px;
+			  width:200px;
+			 }
+			  .biginputbox{
+			    
+			    width:200px;
+				resize:none;
+			 }
+			 .inputbox:focus{
+			      background:pink; 
+			 }
+			 .biginputbox:focus	{
+			    background:lime;
+			 }
+
+              .success{
+			      padding:7px; 
+			      background:skyblue;
+				  color:white;
+				  padding-left:15px;
+				   padding-right:15px;
+				   border-radius:7px;
+				   margin:3px;
+				  
+			  }		
+               .warning{
+			      padding:7px; 
+			      background:orange;
+				  color:white;
+				  padding-left:15px;
+				   padding-right:15px;
+				   border-radius:15px;
+				   margin:3px;
+				  
+			  }					  
+			 
+		</style>
+	</head>
+
+	<body>
+	    <div id="container">
+           <div id="top"></div>
+		     <div id="menublock">
+			      
+				  <a href="home.html" id="menulink">Home</a>
+				  <a href="about.html" id="menulink">About Us</a>
+				  <a href="contact.html" id="menulink" >Contact Us</a>
+				  <a href="login.html" id="menulink" class="active">Login</a>
+				  <a href="signup.html" id="menulink">Sign Up</a>
+			 
+			     
+				 
+			 
+			 </div> 
+			 
+		   <div id="left">
+		          <a href="home.html">Home</a>
+				  <a href="about.html">About Us</a>
+				  <a href="contact.html">Contact Us</a>
+				  <a href="login.html">Login</a>
+				  <a href="signup.html">Sign Up</a>
+		   </div>
+		     
+		   <div id="right">
+		       <fieldset>
+			         <legend>Login</legend>
+				      <table>
+					      <tr>
+						     <th>E-mail:</th>
+						        <td>
+								  <input type="text" class="inputbox" ></td>
+						 
+					     </tr>
+					    
+						<tr>
+					       <th> Password:</th>
+						       <td><input type="password" class="inputbox"></td>
+						  
+					    </tr>
+					    
+						
+					   <tr>
+					     <td align="center" colspan="2"> 
+						 <button class="success">Login</button>
+						 <button class="warning">Reset</button></td>
+					   </tr>
+						
+				  
+</table>				  
+				   
+				  
+			   </fieldset>
+		   </div>
+		       
+		   <div id="clearblock"></div>
+		   
+		   <div id="footerblock"></div>
+		
+		</div><!--container end-->
+	</body>
+</html>

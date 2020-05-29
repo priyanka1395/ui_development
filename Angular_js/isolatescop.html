@@ -1,0 +1,33 @@
+<html>
+<head>
+        <title>shere scope</title>
+		<script>
+		  var app=angular.module("mymodule",[]);
+		  app.controller("myctrl",function($scope){
+		   $scope.name="priyanka"
+		   $scope.resersename=function(){
+		     $scope.name=$scope.name.split( '').reserse('').join('');
+			 }
+		   });
+		   app.directive("my-Directive",function(){
+		   return{
+		   restrict:"EA",
+		   scope:fals{},
+		   template:"<h5>your name is {{name}}</h5>"+
+		   "change your name:<input type='text' ng-module='name'>"
+		   };
+		   });
+		</script>
+</head>
+<body ng-app="mymodule">
+<div ng-controller="myctrl">
+<h3 ng-click="resersename()">
+click the name coming form controller to reserse it : : :{{name}}
+</h3>
+<div my-directive></div>
+<div my-directive></div>
+<div my-directive></div>
+
+</div>
+</body>
+</html>

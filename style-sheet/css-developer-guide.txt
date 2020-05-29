@@ -1,0 +1,88 @@
+
+Property name:
+-------------
+   background:
+-----------------------------------------------------------
+   height:
+      height: 100px;(it is fixed, no increament/decreament)
+	  min-height:100px (it increamental, not decreamental)
+	  height:auto; (increament/decreament both is possible, according to contents
+	  )
+----------------------------------------------------------------------------------
+   width:
+---------------------
+   float: it will convert from block to inline.
+     -> value- left: it arrange the contents from left to right.(LTR)
+	         -  right: it arrange the contents from right to left.(RTL)
+----------------------------------------------------------------------
+Margin: to apply gap from (top,bottom, left,right,all) to a container.		
+      
+      margin:20px-> it will give 20px gap from all side.
+ 	  margin-top:20px-> it will give 20px gap from  top side.
+	  margin-bottom:20px-> it apply 20px gap from bottom.
+	  margin-left:20px -> it apply 20px gap from left side.
+	  margin-right:20px-> it apply 20px gap from right side.
+	  margin:auto;-> it will bring into center of given area.
+--------------------------------------------------------------------	  
+Padding: It will apply gap inside of the cell/container.
+padding:20px; -> all side gap 
+padding-top:20px-> a gap from top.
+padding-left:20px-> a gap from left.
+padding-right:20px-> a gap from right side.
+padding-bottom:20px-> a gap from bottom.
+-----------------------------------------------------------------------
+Note:  margin will apply the gap from out side.
+       padding will apply the gap from inside.
+-----------------------------------------------------------------------
+Border:
+      border:20px solid red; ->all side border.
+      border-top:20px solid red; ->	  
+	  border-bottom:20px solid red; ->	  
+	  border-left:20px solid red; ->	  
+	  border-right:20px solid red; ->	
+      ##########solid, dotted, dashed	  
+------------------------------------------------------------------------
+INLINE CSS:
+           It is one to one system(write once and use once)
+   
+   1. ADV: it have higher priority than internel,externel,import css.	 
+           easy to understand.
+	---------------------------------------------------------------------	   
+    DISADV: 1.it is one to one(write once use once)   
+	        2. since one to one code length will increase.
+			3. because of code big code length, page loading time will increase.
+			4. because of late page loading customer will not like page.
+			5. because of heavy file more disk space will be required.
+			6.there will be loss of internet data.
+			7. SEO/Digital Marketing will be affected.
+-----------------------------------------------------------------------------
+Internal CSS:
+   
+   1. It is one to many system (write once and use many times), but pag wise.
+    a. CSS By TAG NAME.
+	  ->if in one page one type of tag used max one time.
+	b. CSS By TAG ID.
+	  -> if in one page one type of tag use many times but a structure is different.
+	  
+	c. CSS BY TAG CLASS.
+	   -> if in one page many type of tag used many times but a structure is same.
+	d. CSS BY TAG GROUP.
+	
+	e. CSS BY PARENT AND RESPECTIVE CHILD TAG.
+-----------------------------------------------
+syntax:
+-------
+selector{
+    property:value;
+	property:value;
+	property:value;
+}
+------------------
+Five types of selectors in css.
+all the html tag in css call selector.
+-------------------------------
+@import url()- reading the file from css.
+but it is taking long time to downloading the page.
+
+	   
+

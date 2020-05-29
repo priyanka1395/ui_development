@@ -1,0 +1,63 @@
+
+<html>
+	<head>
+	<title>angular js coustume directives</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<script>
+			var app=angular.module("mytest",[]);
+			app.controller("myctrl1",function($scope){
+			
+			});
+			app.directive("myTest",function(){
+			return {
+			restrict:"E",
+			replace:true,
+			template:"<p> called by element</p>"
+			}
+			});
+			app.controller("myctrl2",function($scope){
+			
+			});
+			app.directive("myBook",function(){
+			return {
+			restrict:"A",
+			replace:true,
+			template:"<p> called by atribute</p>"
+			}
+			});
+			app.controller("myctrl3",function($scope){
+			
+			});
+			app.directive("myCopy",function(){
+			return {
+			restrict:"C",
+			replace:true,
+			template:"<p> called by class</p>"
+			}
+			});
+			app.controller("myctrl4",function($scope){
+			
+			});
+			app.directive("myTest",function(){
+			return {
+			restrict:"M",
+			replace:true,
+			template:"<p> called by comment</p>"
+			}
+			});
+		</script>
+	</head>
+	<body ng-app="mytest">
+	<div ng-controller="myctrl1">
+		
+		<my-test></my-test>
+		</div>
+		<div ng-controller="myctrl2"></div>
+		<div my-book></div>
+		<div ng-controller="myctrl3"></div>
+		<div class="my-copy"></div>
+		<div ng-controller="myctrl4"></div>
+		<!-- directive:my-test -->
+	</body>
+</html>

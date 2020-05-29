@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title> angular js Events</title>
+	<script src="assets/js/angular.js"></script>
+	<script>
+	  var app=angular.module("mymodule",[]);
+	  app.controller("myctrl",function($scope){
+	  $scope.testclick=function(){
+	     alert("you have clicked the button twice");
+		 }
+		  $scope.testdb1click=function(){
+	     alert("you have clicked the button twice");
+		 }
+		 $scope.testmousemoveclick=function(){
+	     alert("you have clicked the button click");
+		 }
+		  $scope.testmouseupclick=function(){
+	     alert("you have clicked the button click");
+		 }
+		 
+		  $scope.testmousedownclick=function(){
+	     alert("mouse down event is generate when mouse is praseed&not yet");
+		 }
+		 $scope.testkeypress=function(){
+		 alert("keypress generated");
+		 }
+		 $scope.testkeyup=function(){
+		 alert("key up generated");
+		 }
+		  $scope.testkeydown=function(){
+		 alert("key down generated");
+		 }
+		 $scope.fetchcity=function(city){
+		 alert("city");
+		 }
+		$scope.testblur=function(){
+		 alert("focus is generated");
+		 }
+		 $scope.testblur=function(){
+		 alert("blur is generated");
+		 }
+		
+		 });
+	</script>
+</head>
+<body ng-app="mymodele">
+<div ng-controller="myctrl">
+
+<button ng-clicked="testclick()">text click twice</button>
+<button ng-clicked="testdb1click()">text db1 click twice</button>
+<div ng-mousemove="testmousemove()">test mouse move</div>
+{{count}}
+<button ng-clicked="testmouseup()">text mouse up</button>
+<button ng-clicked="testmousedown()">text mouse down</button>
+<hr>
+keypress<input type="textt" ng-model="fname" ng-keypress="testkeypress()">
+keyup<input type="text" ng-model="email" ng-keypress="testkeyup()">
+keydown<input type="textt" ng-model="mobile" ng-keypress="testkeydown()">
+<select ng-model="city" ng-change="fetchcity(city)">
+<option value="pune">pune</option>
+<option value="channi">channi</option>
+<option value="kolkata">kolkata</option>
+<option value="banglore">banglore</option>
+</select>
+<p>you selected:{{city}}</p>
+focus<input type="text" ng-focus="testfocus()">
+blur<input type="text" ng-focus="testblur()">
+contact<input type="text" ng-focus="testcontact()">
+</div>
+</body>
+</html>

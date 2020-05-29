@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<style>
+		
+		.success{
+	  padding:7px;
+	  background:green;
+	  color:white;
+	  padding-right:15px;
+	  padding-left:15px;
+	  margin:3px;
+	  border-radius:15px;
+	}
+	.warning{
+	  padding:7px;
+	  background:red;
+	  color:white;
+	  padding-right:15px;
+	  padding-left:15px;
+	  
+	  border-radius:15px;
+	  margin:3px;
+	}
+			body{
+				background:skyblue;
+			}
+			#container{
+				background:white;
+				margin:auto;
+				min-height:600px;
+				width:90%;
+				border-radius:5px;
+			}
+			#top{
+				background:gray;
+				height:70px;
+				border-bottom:2px solid red;	
+			}
+			#menublock{
+				background:lightgreen;
+				height:30px;
+				border-bottom:2px solid red;	
+				text-align:center;
+			}
+			#left{
+				width:25%;
+				background:orange;
+				height:494px;
+				float:left;
+			}
+			#right{
+				width:75%;
+				background:#f9f9f9;
+				height:494px;
+				float:left;
+			}
+			#menulink{
+				margin-right:20px;
+				text-decoration:none;
+				font-size:20px;
+				color:black;
+				font-weight:bold;
+			}		
+			#menulink:hover{
+				color:red;
+				text-decoration:underline;
+			}
+			#left a{
+				display:block;
+				margin:10px;
+				text-decoration:none;
+				font-size:17px;
+				color:green;
+				font-weight:bold;
+			}
+			#left a:hover{
+				color:blue;
+				text-decoration:underline;
+			}
+			#clearblock{
+				clear:both;
+			}
+			#footerblock{
+				background:gray;
+				border-top:2px solid green;
+				height:100px;	
+				border-radius:0px 0px 5px 5px;
+			}
+			.circle{
+			       width:31%;
+				   margin:1%;
+				   float:left;
+				   background:skyblue;
+				   color:white;
+				   text-align:center;
+				   height:150px;
+				   boder-radius:10px;
+			}	
+			.myimage{
+			width:96%;
+			height:96%;
+			margin:2%;
+			boder-radius:50px;
+			}
+			fieldset{
+			  boder-radius:10px;
+			  width:50%;
+			  margin:auto;
+			  padding:10%;
+			  }
+		.circle:hover{
+		     background:red;
+			}
+	  .active{
+		       color:red !important;
+			   text-decoration:underline !important;
+			   }
+	.inputbox{
+	        height:27px;
+			width:200px;
+	   }
+	 .biginputbox{
+	        width:200px;
+			resize:none;
+	   
+	   .inputbox:focus{
+	       background:pink;
+		   }
+      .biginputbox:focus{
+	       background:pink;
+		   }
+	
+		 
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top"></div>
+			<div id="menublock">
+				<a href="home.html" id="menulink"> Home </a>
+				<a href="about.html" id="menulink"> About Us </a>
+				<a href="contact.html" id="menulink"> Contact Us </a>
+				<a href="login.html" id="menulink"> Login </a>
+				<a href="signup.html" id="menulink" class="active"> Sign Up </a>
+			</div>
+			<div id="left">
+				<a href="home.html" > Home </a>
+				<a href="about.html" > About Us </a>
+				<a href="contact.html"> Contact Us </a>
+				<a href="login.html" > Login </a>
+				<a href="signup.html" > Sign Up </a>
+			</div>
+			<div id="right">
+			<fieldset>
+			    <legend> sign up</legend>
+				 <table>
+                     <tr>
+                        <th> full name </th>
+                        <td> <input type="text" class="input"></td>
+                   </tr>
+				   <tr>
+                        <th> mobile</th>
+                        <td> <input type="text" class="input"></td>
+                   </tr>
+				   
+				   
+				  <tr>
+                        <th> e_mail </th>
+                        <td> <input type="text" class="input"></td>
+                   </tr>
+				   <tr>
+                        <th> password</th>
+                        <td> <input type="password" class="input"></td>
+                   </tr>
+				   <tr>
+                        <th> address </th><br>
+                       <td><textarea class="biginputbox"></textarea></td>
+                   </tr>
+				   
+				   
+				   <tr>
+				       <td align="center" colspan="2">
+					   <button class="success"> register </button>
+					   <button class="warning"> Reset </button>
+					   </td>
+					</tr>
+		 </table>
+					   
+                   				   
+				
+				  
+			</fieldset>
+			</div>
+			<div id="clearblock"></div>
+			<div id="footerblock"></div>
+			
+		</div><!--container end-->	
+		
+		
+	</body>
+</html>

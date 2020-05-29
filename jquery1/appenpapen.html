@@ -1,0 +1,33 @@
+
+<html>
+	<head>
+		<title>
+			append and prepend
+		</title>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#list1").append("<li>cherry</li>");
+				});
+				$("#btn2").click(function(){
+					$("#list2").prepend("<li>cherry</li>");
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<ul id="list1">
+				<li>mango</li>
+				<li>banana</li>
+				<li>apple</li>
+			</ul>
+			<ul id="list2">
+				<li>mango</li>
+				<li>banana</li>
+				<li>apple</li>
+			</ul>
+			<button id="btn1">add at end(append)</button>
+			<button id="btn2">add at before(prepend)</button>
+		</body>
+</html>

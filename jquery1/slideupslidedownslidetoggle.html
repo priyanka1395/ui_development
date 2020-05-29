@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+			fadeinfadeoutfadetoggle
+		</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			.list-group{
+				display:none;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$(".list-group").slideToggle();
+				})
+				$("#btn2").click(function(){
+					$(".list-group1").slideUp();
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8 well" >
+					<p>this is syllabus of html......this is syllabus of html......this is syllabus of html......
+					this is syllabus of html......this is syllabus of html......this is syllabus of html......</p>
+					<button type="button" class="btn btn-success" id="btn1">Viewmore</button>
+						<ul class="list-group">
+							<li class="list-group-item">html</li>
+							<li class="list-group-item">css</li>
+							<li class="list-group-item">javascript</li>
+							<li class="list-group-item">bootstrap</li>
+						</ul>
+					<p>this is syllabus of html......this is syllabus of html......this is syllabus of html......
+					this is syllabus of html......this is syllabus of html......this is syllabus of html......</p>
+					<button type="button" class="btn btn-success" id="btn2">Viewmore</button>
+						<ul class="list-group1">
+							<li class="list-group-item">html</li>
+							<li class="list-group-item">css</li>
+							<li class="list-group-item">javascript</li>
+							<li class="list-group-item">bootstrap</li>
+						</ul>	
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+
+<html>
+	<head>
+		<title>add and remove multiple values from the dropdown</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#adddish").click(function(){
+					$("#dish option:selected").appendTo($("#mydish"));
+				})
+				$("#removedish").click(function(){
+					$("#mydish option:selected").remove().appendTo($("#dish"));
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				<label>choose your favourite dish</label>
+				<select class="form-control" id="dish" multiple>
+				<option value="paneer">paneer masala</option>		
+				<option value="veg pulav">veg pulav</option>		
+				<option value="veg makhanwala">veg makhan wala</option>		
+				<option value="naan">naan</option>		
+				<option value="roti">roti</option>		
+				<option value="veg kadhai">veg kadhai</option>		
+				<option value="veg bulbul">veg bulbul</option>		
+				<option value="bhendifry">bhendifry</option>		
+				<option value="bhendifry">babycornmasala</option>		
+				</select>
+				</div>
+				<div class="col-sm-4">
+				<button type="button" id="adddish" class="btn btn-success">
+					Add
+				</button><br><br><br>
+				<button type="button" id="removedish" class="btn btn-danger">
+					remove
+				</button>
+				</div>
+				<div class="col-sm-4">
+				<label>selected dish</label>
+				<select class="form-control" multiple id="mydish">
+				</select>
+				</div>
+		</div>
+			</div>
+		</div>
+	</body>
+</html>

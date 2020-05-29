@@ -1,0 +1,171 @@
+
+<html>
+	<head>
+		<title>Sign Up Form</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/carousel.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
+		<style>
+		
+		</style>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					var name=$("#name").val().trim();
+					var code=$("#code").val().trim();
+					var catagory=$("#cat").val().trim();
+					var brand=$("#brand").val();
+					var description=$("#dsc").val().trim();
+					var price=$("#price").val().trim();
+					var status=true;
+					if(name=="")
+					{
+						status=false;
+						$("#name").css("border","2px solid red");
+						$("#nameerror").text("Please enter your name").css("color","red");
+					}
+					else
+					{
+						$("#name").css("border","2px solid green");
+						
+					}
+					//==============for email=================//
+					if(code=="")
+					{
+						status=false;
+						$("#code").css("border","2px solid red");
+						$("#codeerror").text("Please enter your ecode").css("color","red");
+					}
+					else
+					{
+						$("#code").css("border","2px solid green");
+					}
+					//==============for mobile==============//
+					if(catagory=="")
+					{
+						status=false;
+						$("#cat").css("border","2px solid red");
+						$("#caterror").text("Please enter your catagory").css("color","red");
+					}
+					else
+					{
+						$("#cat").css("border","2px solid green");
+					}
+					//==============for city=============//
+					if(brand=="")
+					{
+						status=false;
+						$("#brand").css("border","2px solid red");
+						$("#branderror").text("Please select your brand").css("color","red");
+					}
+					else
+					{
+						$("#brand").css("border","2px solid green");
+					}
+					//===========for message============//
+					if(description=="")
+					{
+						status=false;
+						$("#dsc").css("border","2px solid red");
+						$("#dscerror").text("Please write something").css("color","red");
+					}
+					else
+					{
+						$("#dsc").css("border","2px solid green");
+					}
+					
+					if(price=="")
+					{
+						status=false;
+						$("#price").css("border","2px solid red");
+						$("#priceerror").text("").css("color","red");
+					}
+					else
+					{
+						$("#price").css("border","2px solid green");
+					}
+					//=========if status is true then only submit my form==============//
+					if(status==true)
+					{
+						$("#f1").submit();
+						
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h3 class="bg-success" id="success"></h3>
+			<div class="row well">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+				
+				
+					<div class="panel panel-primary">
+						<div class="panel-heading text-center">
+							<h3><b>add product</b></h3>
+							
+						</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label>product name </label>
+								<input type="text" class="form-control" placeholder="Enter Your Name" id="name">
+								<i id="nameerror"></i>
+							</div>
+							<div class="form-group">
+								<label> product code </label>
+								<input type="text" class="form-control" placeholder="Enter code" id="code">
+								<i id="codeerror"></i>
+							</div>
+							
+							
+							<div class="form-group">
+								<label>Catagory</label>
+								<select id="cat" class="form-control">
+									<option value="">Choose</option>
+									<option value="1">computer</option>
+									<option value="2">mobile</option>
+									<option value="3">kitchen apliance</option>
+									<option value="4">Home apliance</option>
+									
+								</select>
+								<i id="caterror"></i>
+							</div>
+							<div class="form-group">
+								<label>brand</label>
+								<select id="brand" class="form-control">
+									<option value="">Choose</option>
+									<option value="1">samsung</option>
+									<option value="2">sony</option>
+									<option value="3">hitachi</option>
+									<option value="4">lg</option>
+									
+								</select>
+								<i id="branderror"></i>
+							</div>
+							
+							<div class="form-group">
+								<label> description</label>
+								<textarea class="form-control" placeholder="" id="dsc"></textarea>
+								<i id="dscerror"></i>
+							</div>
+							<div class="form-group">
+								<label> price </label>
+								<input type="text" class="form-control" placeholder="" id="price">
+								<i id="priceerror"></i>
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<button class="btn btn-primary" id="btn1" type="button"> add </button>
+							
+						</div>
+					</div><!--panel end here---->
+				
+				</div>
+				<div class="col-sm-2"></div>
+			</div><!--row end-->
+		</div><!--container end -->
+	</body>
+</html>

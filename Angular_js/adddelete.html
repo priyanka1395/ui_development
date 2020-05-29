@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Add Delete in Angular JS</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="fa/css/font-awesome.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<script src="assets/js/myapp.js"></script>
+		<style>
+			#star{
+				color:red;
+				width:30px;
+			}
+		</style>
+	</head>
+	<body ng-app="myModule">
+		
+		<div ng-controller="myctrl" class="container">
+		
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title text-center">Add Product</div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-sm-4">Product Name <i class="fa fa-user"></i></div>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="Enter Product Name" ng-model="proname">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">Catagory</div>
+								<div class="col-sm-8">
+									<select class="form-control" ng-model="procatagory">
+										<option value="">Choose Catagory</option>
+										<option value="gadgets">Gadgets</option>
+										<option value="electronis">Electronis</option>
+										<option value="Clothing">Clothing</option>
+										<option value="Kitchen Items">Kitchen Items</option>
+										<option value="Automobile">Automobile</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">Brand</div>
+								<div class="col-sm-8">
+									<select class="form-control" ng-model="probrand">
+										<option value="">Choose Brand</option>
+										<option value="samsung">Samsung</option>
+										<option value="polo">polo</option>
+										<option value="Beinghuman">Being Human</option>
+										<option value="apple">Apple</option>
+										<option value="LG">LG</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">Price <i class="fa fa-money"></i></div>
+								<div class="col-sm-8">
+									<input type="number" class="form-control" placeholder="Enter Product Price" ng-model="proprice">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">Description</div>
+								<div class="col-sm-8">
+									<textarea class="form-control" placeholder="Enter Product Description" ng-model="prodescription"></textarea>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-12 text-center">
+									<button type="button" class="btn btn-primary" ng-click="saveproduct()">Add</button>
+								</div>
+								
+							</div>
+						</div><!--panel body close-->
+						<div class="panel-footer text-center">
+						
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+							<i class="fa fa-star 3x" id="star"></i>
+						
+						</div>
+					</div><!--panel end here-->
+					<hr>
+					
+					<h3 class="text-center">Product Details</h3>
+					
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-success">
+								<th>Name</th>
+								<th>Catagory</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Description</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="p in myproduct">
+								<td>{{p.pname}}</td>
+								<td>{{p.pcatagory}}</td>
+								<td>{{p.pbrand}}</td>
+								<td>{{p.pprice|currency:"Rs"}}</td>
+								<td>{{p.pdescription}}</td>
+								<td>
+									<button type="button" class="btn btn-danger" ng-click="deleteproduct($index)">
+									
+										<span class="glyphicon glyphicon-trash"></span>
+									
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		
+		</div>
+		
+	</body>
+</html>

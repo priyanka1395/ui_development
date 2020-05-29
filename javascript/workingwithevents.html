@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>
+			working with events
+		</title>
+		<script>
+			function gohome()
+			{
+				var email=document.getElementById("em").value;
+				var password=document.getElementById("pass").value;
+				var status=true;
+				
+				
+				
+				if(email=="")
+				{
+					status=false;
+					
+					document.getElementById("em").style.border="2px solid red";
+					
+				}
+				else{
+					document.getElementById("em").style.border="";
+					
+				}
+				if(password=="")
+				{
+					status=false;
+					
+					document.getElementById("pass").style.border="2px solid red";
+					
+				}
+				else{
+					document.getElementById("pass").style.border="";
+					
+				}
+				if(status==true)
+				{
+				
+				document.getElementById("login").style.display="none";
+				document.getElementById("home").style.display="block";
+				document.getElementById("b1").style.backgroundColor="orange";
+			}
+			}
+		</script>
+		<style>
+			#home{
+				display:none;
+			}
+		</style>
+	</head>
+	<body id="b1">
+		<table id="login" align="center" bgcolor="skyblue">
+		<tr>
+			<th>email/mobile</th>
+			<td><input type="text" id="em">
+			</td>
+		</tr>
+		<tr>
+			<th>password</th>
+			<td><input type="password" id="pass">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="button" value="login" onclick="gohome()">
+			</td>
+		</tr>
+		</table>
+		<div id="home">
+			<h3 align="center">this is my home page</h3>
+		</div>
+	</body>
+</html>

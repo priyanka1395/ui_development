@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>
+			fadeinfadeoutfadetoggle
+		</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			#green{
+				background-color:green;
+				height:150px;
+				border-radius:15px;
+				border:2px solid green;
+			}
+			#yellow{
+				background-color:yellow;
+				height:150px;
+				border-radius:15px;
+				border:2px solid green;
+			}
+			#red{
+				background-color:red;
+				height:150px;
+				border-radius:15px;
+				border:2px solid green;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("#red").fadeIn(2000);
+					$("#green").fadeIn(3000);
+					$("#yellow").fadeIn(4000);
+				})
+				$("#btn2").click(function(){
+					$("#red").fadeOut(2000);
+					$("#green").fadeOut(3000);
+					$("#yellow").fadeOut(4000);
+				})
+				$("#btn3").click(function(){
+					$("#red").fadeToggle(2000);
+					$("#green").fadeToggle(3000);
+					$("#yellow").fadeToggle(4000);
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8 well" >
+					<div class="row">
+						<div class="col-sm-4" id="green">
+						
+						</div>
+						<div class="col-sm-4" id="yellow">
+						
+						</div>
+						<div class="col-sm-4"id="red">
+						
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 text-center" >
+							<button type="button" id="btn1"class="btn btn-primary">FadeIn</button>
+							<button type="button" id="btn2"class="btn btn-success">FadeOut</button>
+							<button type="button" id="btn3"class="btn btn-danger">FadeToggle</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+	</body>
+</html>

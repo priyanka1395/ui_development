@@ -1,0 +1,63 @@
+<html>
+   <head>
+        <title>filter in angular js</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script src="assets/js/angular.js"></script>
+		<script>
+		       var app=angular.module("myapp",[]);
+			   app.controller("myctrll",function($scope){
+			   var customer=[{'name':'jagu','email':'jagu@gmail.com','mobile':'111111111','city':'pune','state':'karnakata'},
+   {'name':'tiku','email':'tiku@gmail.com','mobile':'7777777777','city':'bangalore','sate':'karnakata'},
+   {'name':'miku','email':'miku@gmail.com','mobile':'666666666666','city':'bangalore','state':'karnakata'},
+   {'name':'ramu','email':'ramu@gmail.com','mobile':'5555555555','city':'bangalore','city':'bangalore'},
+   {'name':'ronk','email':'ronk@gmail.com','mobile':'333333333333','city':'bangalore','city':'bangalore'},
+   {'name':'rinku','email':'rinku@gmail.com','mobile':'111111111','city':'bangalore','city':'bangalore'},
+   
+  ];
+        $scope.customer=customer;
+			   });
+		</script>
+   </head>
+ <body ng-app="myapp">
+ <div class="container" ng-controller="myctrll">
+ <div class="row">
+ <div class="col-sm-2"></div>
+ <div class="col-sm-8"></div>
+ <div class="row">
+ <div class="col-sm-3"></div>
+ <div class="col-sm-6">
+ <form class="form-inline">
+ <label>surch the table</label>
+ <input type="text" class="form-control" placeholder="surch" ng-model="">
+ 
+ </div>
+ <div class="col-sm-3"></div>
+ </div>
+ <hr>
+ <table class="table table-striped">
+						<thead>
+							<tr class="bg-primary">
+								<th>name</th>
+								<th>email</th>
+								<th>city</th>
+								<th>state</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="c in customers|filter:skey">
+								<td>{{c.name|upercase}}</td>
+								<td>{{c.email}}</td>
+								<td>{{c.city}}</td>
+								<td>{{c.state|lowercase}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+ 
+ 
+
+</body>
+</html>

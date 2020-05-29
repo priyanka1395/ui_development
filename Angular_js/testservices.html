@@ -1,0 +1,21 @@
+<html>
+<head>
+     <title> services in angular.js</title>
+	 <script src="assets/js/angular.js"></script>
+	 <script>
+	     var app=angular.module("myapp",[]);
+		 app.controller("myctrl",function($scope,$timeout){
+		 $scope.msg="hello world";
+		 $timeout(function(){
+		 $scope.msg="kolkata knight";
+		 },
+		 2000);
+		 });
+	 </script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="myctrl">
+{{msg}}
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>Add in Angular JS</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="fa/css/font-awesome.css" rel="stylesheet">
+		 <link rel="stylesheet" href="assets/fa/css/font-awesome.css">
+		<script src="assets/js/angular.js"></script>
+		<script src="assets/js/myapp.js"></script>
+		<style>
+			#star{
+				color:red;
+				width:30px;
+			}
+		</style>
+	</head>
+	<body ng-app"myModule">
+	<div ng-controller="myctrl" class="container">
+		
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title text-center">Add Coustomer</div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-sm-4"> Name <i class="fa fa-user"></i></div>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="Enter Product Name" ng-model="proname">
+								</div>
+							</div>
+							<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-sm-4"> Email <i class="fa fa-user"></i></div>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="Enter Product Name" ng-model="proname">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">mobile no <i class="fa fa-money"></i></div>
+								<div class="col-sm-8">
+									<input type="number" class="form-control" placeholder="Enter Product Price" ng-model="proprice">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-4">city</div>
+								<div class="col-sm-8">
+									<select class="form-control" ng-model="probrand">
+										<option value="">Choose city</option>
+										<option value="samsung">kolkata</option>
+										<option value="polo">bhagalpur</option>
+										<option value="Beinghuman">bangalore</option>
+										<option value="apple">kerala</option>
+										<option value="LG">patna</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-12 text-center">
+									<button type="button" class="btn btn-primary" ng-click="saveproduct()">Save</button>
+								</div>
+								
+							</div>
+						</div><!--panel body close-->
+						<br>
+					<hr>
+					<h3 class="text-center">name details</h3>
+					
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-success">
+								<th>Name</th>
+								<th>Email</th>
+								<th>mobile</th>
+								<th>city</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+					<tr ng-repeat="p in myname">
+								<td>{{p.priya}}</td>
+								<td>{{p.priya@gmail}}</td>
+								<td>{{p.77777777}}</td>
+								<td>{{p.channi|currency:"Rs"}}</td>
+								
+								<td>
+									<button type="button" class="btn btn-danger" ng-click="deleteproduct($index)">
+									
+										<span class="glyphicon glyphicon-trash"></span>
+									
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+		
+					
+	</body>
+	</html>

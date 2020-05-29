@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			text()and html()
+		</title>
+		<style>
+			#div1{
+				height:100px;
+				width:100px;
+				background-color:red;
+				
+			}
+		</style>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#div1").mouseenter(function(){
+					$("#div1").animate({"height":"300px","width":"500px"
+					})
+				})
+				$("#div1").mouseleave(function(){
+					$("#div1").animate({"height":"100px","width":"100px"
+					})
+					})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+		
+		</div>
+	</body>
+</html>

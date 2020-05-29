@@ -1,0 +1,113 @@
+<html>
+     <head>
+	      <title>Conditions and loops</title>
+		  <script>
+		       function testifcondition()
+			   //function body
+			   {
+			     var a=10;
+                if(a==20){
+                          alert("a is equal to 10");
+			            }
+			   }
+			   function testifelsecondition(){
+			      var a=20;
+                  var b=30;
+                  if(b>a){
+				       alert("b is greater")
+				  }				  
+				  else{
+		              alert("a is greater")		  
+				  }
+					
+			   }//close function
+			   function testifelseifcondition()
+			   {
+			        var age=prompt("Enter your age");
+					var voterid=prompt("Do you have voterid");
+					if(age>=18 && voterid=="yes")
+					{
+					   alert("you have right to vote")
+					}
+					else if(age>18 && voterid=="no")
+					{
+					    alert("you do not have right to vote as u dont have voterid")
+					}
+					else{
+					    alert("u r not eligible to vote");
+					}
+			   }//closes
+			   function testswitchcase()
+			   {
+			        var car=prompt("Enter your favourite car");
+					switch(car)
+					{
+					   case "BMW":
+					          alert("ur favourite car is"+car);
+					   break;
+					   
+					   case "Mercerise":
+					         alert("ur favourite car is"+car);
+					   break;
+					   
+					   case "Toyota":
+					        alert("ur favourite car is"+car);
+					   break;
+					   
+					   case "Honda":
+					         alert("ur favourite car is"+car);
+					   break;
+					   
+					   case "Honda city":
+					        alert("ur favourite car is"+car);
+					   break;
+					   
+					  default:
+                             alert("Mention car is in not in the list");					  
+					   
+					}
+			   }//close
+			   function testwhileloop()
+			   {
+			         var a=prompt("enter the number to start");
+					 var b=prompt("enter the number to end with");
+					 a=parseInt(a);
+					 b=parseInt(b);
+					 while(a<=b)
+					 {
+					    document.write("the value of a is="+a+"<br>");
+						a++;
+					 }
+			   }//close
+			   function testforloop(){
+			         var a=prompt("enter the larger number");
+					 var b=prompt("enter the smaller number to end with");
+					 
+					 for(a>b;a--;)
+					 {
+					      document.write("the value of a is="+a+"<br>");
+					 }
+			   }//close
+			   function testdowhileloop()
+			   {
+			      var a=10;
+				  do{
+				     document.write("The value of a is="+a);
+					 a++;
+				  }
+				  while(a<10)
+			   }
+		 </script>
+	 </head>
+	 <body>
+	     <button onclick="testifcondition()">test if</button>
+		 <button onclick="testifelsecondition()">test if else</button>
+		 <button onclick="testifelseifcondition()">test if else if</button>
+		 <button onclick="testswitchcase()">test switch </button>
+		 
+		 <h3>Loops</h3>
+		 <button onclick="testwhileloop()">While</button>
+		 <button onclick="testforloop()">For loop</button>
+		 <button onclick="testdowhileloop()">Do While</button>
+	</body>	 
+</html>	

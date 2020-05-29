@@ -1,0 +1,32 @@
+<html>
+     <head>
+	      <title>
+		  working with json
+		  </title>
+		  <script>
+		       function fetchjson()
+			   {
+			     var myjsondata='[{"name":,"abc","mobile":"66666666","city":"bangalore"},{"usa":,"abc","mobile":"77777777","city":"bangalore"},{"ram":,"abc","mobile":"8888888888","city":"bangalore"},{"sita":,"abc","mobile":"66666666","city":"bangalore"},{"gita":,"abc","mobile":"66666666","city":"bangalore"},]'
+				 var mydata=json.parse(myjsondata);//conversion 
+				 alert(mydata.length);
+				 var data="<table bgcolor='skyblue' align='center'>";
+			        data=data+"<tr><th>name</th><th>mobile</th><th>city</th></tr>
+					for(var i=0;i<mydata.length;i++)
+					{
+					data=data+"<tr>";
+					data=data+"<td>"+mydata[i].name+"<td>";
+					data=data+"<td>"+mydata[i].mobile+"<td>";
+					data=data+"<td>"+mydata[i].city+"<td>";
+					data=data+"</tr>";
+
+					}
+			   data=data+"</table>";
+			   document.getElementById("result").innerHTML=data;
+			   }
+		  </script>
+	 </head>
+	 <body>
+	     <button onclick="fetchjson()">fetch json data</button>
+		 <div id="result"></div>
+	 </body>
+</html>
